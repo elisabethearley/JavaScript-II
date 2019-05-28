@@ -57,27 +57,19 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
 for ( let i = 0; i < runners.length; i++) {
-//    runner.foreach(function(item) {
+//    runners.foreach(function(item) {
     fullName.push(runners[i].first_name + ' ' + runners[i].last_name);
 }
-/*const newArr = []
-theArray.forEach(function(item) {
-	newArr.push(item * 2) 
-	return newArr
-}
-
-given theArray = [3,4,5]
-console.log(newArr) /* ===> [6, 8, 10] */
 
    
 console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-/*const mappedFirstNames = runners.map((state) => {
+const mappedFirstNames = runners.map((state) => {
     return {"first_name": state.first_name};
 });
-console.log(mappedFirstNames);*/
+console.log(mappedFirstNames);
 
 let allCaps = [];
 for ( let i = 0; i < runners.length; i++ ) {
@@ -105,7 +97,25 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+const mappedLastNames = runners.map((state) => {
+    return {"last_name": state.last_name};
+});
+console.log(mappedLastNames);
+
+let lowCase = [];
+for ( let i = 0; i < runners.length; i++) {
+    lowCase.push(runners[i].last_name.toLowerCase());
+}
+console.log(lowCase);
 
 // Problem 2
+const emailAdd = runners.map((state) => {
+    return {"email": state.email};
+});
+console.log(emailAdd);
 
 // Problem 3
+let largeDon = runners.filter((state) => {
+    return state.donation >= 100;
+});
+console.log(largeDon);
