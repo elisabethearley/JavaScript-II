@@ -87,6 +87,26 @@ function contains(item, list, cb) {
   // Pass true to the callback if it is, otherwise pass false.
 }
 
+const list = ['Hair', 'Nails', 'Outfit','Shoes'];
+
+function contains(item, list, cb) {
+  let present = 'false';
+
+  for( let i = 0; i < list.length; i++) {
+    let check = list[i];
+    if(check === item){
+      present = 'true';
+      continue;
+    }
+  } 
+  return present;
+}
+console.log('Item present : ' + contains('Outfit', list));
+console.log('Item present : ' + contains('Earrings', list));
+
+
+
+
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
